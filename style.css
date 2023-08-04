@@ -1,0 +1,126 @@
+:root {
+    --ff1: 'Fraunces', serif;
+    --ff2: 'Montserrat', sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+
+    --clr-primary-100: hsl(30, 38%, 92%);
+    --clr-primary-300: hsl(158, 36%, 37%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-300: hsl(228, 12%, 48%);
+    --clr-neutral-700: hsl(212, 21%, 14%);
+
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 2.5rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--ff2);
+    font-size: var(--fs-400);
+    background-color: var(--clr-primary-100);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+.product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-inline: 1rem;
+    max-width: 40rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    background-color: var(--clr-neutral-100);
+    box-shadow: 0 0 10px 5px hsla(228, 12%, 48%, 0.1);
+}
+
+.product-image {
+    content: url("/images/image-product-desktop.jpg");
+    width: 20rem;
+    height: 30rem;
+}
+
+.product-description {
+    display: grid;
+    align-content: start;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.tag {
+    letter-spacing: 5px;
+    font-size: var(--fs-300);
+    color: var(--clr-neutral-300);
+}
+
+.title h1 {
+    font-family: var(--ff1);
+    font-size: var(--fs-800);
+    color: var(--clr-neutral-700);
+    padding-right: 2rem;
+}
+
+.details {
+    color: var(--clr-neutral-300);
+    line-height: 1.5;
+}
+
+.price {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.discounted-price {
+    font-family: var(--ff1);
+    font-size: var(--fs-800);
+    font-weight: var(--fw-bold);
+    color: var(--clr-primary-300);
+}
+
+.actual-price {
+    font-size: var(--fs-300);
+    text-decoration: line-through;
+    color: var(--clr-neutral-300);
+}
+
+button {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--clr-primary-300);
+    color: var(--clr-neutral-100);
+    border-radius: 10px;
+    height: 3rem;
+}
+
+button p {
+    font-weight: var(--fw-bold);
+}
