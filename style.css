@@ -7,11 +7,13 @@
 
     --clr-primary-100: hsl(30, 38%, 92%);
     --clr-primary-300: hsl(158, 36%, 37%);
+    --clr-primary-500: hsl(158, 36%, 20%);
 
     --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-neutral-300: hsl(228, 12%, 48%);
     --clr-neutral-700: hsl(212, 21%, 14%);
 
+    --fs-200: 0.75rem;
     --fs-300: 0.875rem;
     --fs-400: 1rem;
     --fs-500: 1.25rem;
@@ -62,13 +64,12 @@ body {
 .product-image {
     content: url("/images/image-product-desktop.jpg");
     width: 20rem;
-    height: 30rem;
 }
 
 .product-description {
     display: grid;
     align-content: start;
-    gap: 1.5rem;
+    gap: 1.65rem;
     padding: 2rem;
 }
 
@@ -83,6 +84,7 @@ body {
     font-size: var(--fs-800);
     color: var(--clr-neutral-700);
     padding-right: 2rem;
+    line-height: 1.1;
 }
 
 .details {
@@ -109,7 +111,7 @@ body {
     color: var(--clr-neutral-300);
 }
 
-button {
+.btn {
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -118,9 +120,78 @@ button {
     background-color: var(--clr-primary-300);
     color: var(--clr-neutral-100);
     border-radius: 10px;
-    height: 3rem;
+    padding: 1rem 0;
+    font-size: var(--fs-400);
+    cursor: pointer;
+}
+
+.btn:is(:hover, :focus) {
+    background-color: var(--clr-primary-500);
 }
 
 button p {
     font-weight: var(--fw-bold);
+}
+
+@media(width <=680px) {
+    .body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+    }
+
+    .product-card {
+        grid-template-columns: 1fr;
+        margin: 1rem;
+    }
+
+    .product-image {
+        content: url("/images/image-product-mobile.jpg");
+        width: 100%;
+    }
+
+    .product-description {
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .price {
+        gap: 1rem;
+    }
+}
+
+@media(max-width: 480px) {
+    .product-card {
+        min-width: 250px;
+    }
+
+    .product-description {
+        gap: .8rem;
+        padding: 1rem;
+    }
+
+    .tag {
+        font-size: var(--fs-200);
+    }
+
+    .title h1 {
+        font-size: var(--fs-600);
+        padding-right: none;
+    }
+
+    .details {
+        font-size: var(--fs-200);
+    }
+
+    .discounted-price {
+        font-size: var(--fs-600);
+    }
+
+    .actual-price {
+        font-size: var(--fs-200);
+    }
+
+    button {
+        font-size: var(--fs-200);
+    }
 }
