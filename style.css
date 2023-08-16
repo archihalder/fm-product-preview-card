@@ -32,6 +32,7 @@
 * {
     margin: 0;
     padding: 0;
+    font: inherit;
 }
 
 img,
@@ -71,6 +72,11 @@ article {
     display: none;
 }
 
+.product-img img {
+    height: 100%;
+    width: auto;
+}
+
 .product-content {
     font-family: var(--ff2);
     padding: 2rem;
@@ -79,14 +85,14 @@ article {
     justify-content: space-between;
 }
 
-.product-content h2 {
+.product-content h1 {
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 5px;
     color: var(--clr-neutral-400);
 }
 
-.product-content h1 {
+.product-content h2 {
     font-family: var(--ff1);
     font-size: 32px;
 }
@@ -125,6 +131,11 @@ button {
     padding: 1rem 0;
     border-radius: 10px;
     border: none;
+}
+
+button img {
+    height: 15px;
+    width: 15px;
 }
 
 button span {
